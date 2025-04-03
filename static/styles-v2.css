@@ -1,0 +1,260 @@
+/* Подключение шрифта Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+/* Общие стили */
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Центрирование контента */
+.container,
+.header-container,
+.main-content,
+.main-banner,
+.icons-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+/* Заголовки */
+h1, h2, h3, h4 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+    color: #0B132A;
+    text-align: left;
+}
+
+h1 span, .icon-text {
+    font-weight: 700;
+}
+
+/* Текстовые элементы */
+.subtitle, 
+.header-nav a, 
+.icon-label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F5665;
+    text-align: left;
+    line-height: 1.5;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Хедер */
+header {
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-right: 100px;
+}
+
+/* Стили для меню */
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.header-nav li {
+    margin-left: 40px;
+}
+
+/* Для кнопки Sign In с более высокой специфичностью */
+.header-nav .sign-in-btn {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500; /* Medium */
+    text-decoration: none;
+    color: #0B132A; /* Цвет текста кнопки Sign In */
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    margin-right: 10px; /* Расстояние между Sign In и Sign Up */
+}
+
+.sign-up-btn {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    color: #F53855;
+    border: 1px solid #F53855;
+    padding: 13px 45px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+}
+
+/* Селектор для элемента Help */
+.header-nav li.help {
+    margin-right: 150px;
+}
+
+/* Стили для ссылок в меню */
+.header-nav a {
+    text-decoration: none;
+    color: #4F5665;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Основной контент */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.main-content .image-right {
+    max-width: 50%;
+    height: auto;
+}
+
+.main-content .text-left {
+    width: 612px;
+    height: 382px;
+    object-fit: cover;
+    padding-right: 20px;
+}
+
+/* Кнопки */
+.button-container {
+    margin-top: 50px;
+    text-align: left;
+    width: 100%;
+}
+
+.button {
+    display: block;
+    width: 250px;
+    height: 60px;
+    background-color: #F53838;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 60px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 25px 30px rgba(245, 56, 56, 0.35);
+    text-align: center;
+}
+
+/* Иконки */
+.icons-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.rect-background {
+    position: absolute;
+    width: 1200px;
+    height: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    z-index: 0;
+}
+
+.rect-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background: transparent;
+    padding: 100px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: nowrap;
+}
+
+/* Линии иконок */
+.vertical-line {
+    width: 2px;
+    height: 126px;
+    background-color: #EEEFF2;
+    flex-shrink: 0;
+}
+
+.icons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.icons-section figure {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-shrink: 0;
+}
+
+.icons-section img {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+}
+
+/* Текст в иконках */
+.icons-section figcaption {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.icon-text {
+    font-size: 25px;
+    color: #0B132A;
+}
+
+.icon-label {
+    font-size: 20px;
+}

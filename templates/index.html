@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-v2.css') }}">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='Logo.svg') }}" alt="Logo" class="logo">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li class="help"><a href="#">Help</a></li>
+                    <!-- Заменим ссылку на кнопку для Sign In -->
+                    <li><a href="#" class="sign-in-btn">Sign In</a></li>
+                    <!-- Кнопка Sign Up -->
+                    <li><button class="sign-up-btn">Sign Up</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Группа с изображением и подписью -->
+        <div class="main-content">
+            <!-- Текст с левой стороны -->
+            <div class="text-left">
+                <h1>
+                    Want anything to be easy with <span>LaslesVPN</span>
+                </h1>
+                <p class="subtitle">Provide a network for all your needs with ease and fun using <span>LaslesVPN</span>. Discover interesting features from us.</p>
+                <!-- Кнопка Get Started -->
+                <div class="button-container">
+                    <a href="#" class="button">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Иллюстрация справа -->
+            <div class="image-right">
+                <figure>
+                    <img src="{{ url_for('static', filename='Illustration_1.png') }}" alt="Illustration 1">
+                </figure>
+            </div>
+        </div>
+
+        <!-- Иконки с подписями -->
+        <div class="icons-section">
+            <div class="icons-section-wrapper">
+                <div class="rect-background"></div> <!-- Прямоугольник с тенью -->
+                <div class="rect-content">
+                    <!-- Иконки и их текст -->
+                    <figure>
+                        <img src="{{ url_for('static', filename='icon/user.png') }}" alt="User Icon">
+                        <figcaption>
+                            <span class="icon-text">90+</span><br>
+                            <span class="icon-label">Users</span>
+                        </figcaption>
+                    </figure>
+                    <div class="vertical-line"></div> <!-- Вертикальная линия -->
+                    <figure>
+                        <img src="{{ url_for('static', filename='icon/location.png') }}" alt="Location Icon">
+                        <figcaption>
+                            <span class="icon-text">30+</span><br>
+                            <span class="icon-label">Locations</span>
+                        </figcaption>
+                    </figure>
+                    <div class="vertical-line"></div> <!-- Вертикальная линия -->
+                    <figure>
+                        <img src="{{ url_for('static', filename='icon/server.png') }}" alt="Server Icon">
+                        <figcaption>
+                            <span class="icon-text">50+</span><br>
+                            <span class="icon-label">Servers</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
